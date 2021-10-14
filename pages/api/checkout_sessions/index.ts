@@ -44,8 +44,8 @@ const CheckoutSessionHandler = async (
         mode: "subscription",
         payment_method_types: ["card"],
         line_items: [{ price: price_id, quantity: 1 }],
-        success_url: `http://localhost:8000/thank-you`,
-        cancel_url: `http://localhost:8000/`,
+        success_url: `${process.env.STRIPE_REDIRECT_AFTER_CHECKOUT_URL}/thank-you`,
+        cancel_url: `${process.env.STRIPE_REDIRECT_AFTER_CHECKOUT_URL}/`,
         customer_email,
         subscription_data: {
           trial_period_days: 7,
