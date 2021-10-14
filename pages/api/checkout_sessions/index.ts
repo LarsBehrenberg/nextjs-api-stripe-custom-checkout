@@ -54,11 +54,8 @@ const CheckoutSessionHandler = async (
       const checkoutSession: Stripe.Checkout.Session =
         await stripe.checkout.sessions.create(params);
 
-      console.log(checkoutSession);
-
       res.status(200).json(checkoutSession);
     } catch (err) {
-      console.log(err);
       res.status(500).json({ statusCode: 500, message: err });
     }
   } else {

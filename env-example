@@ -1,0 +1,2 @@
+STRIPE_SECRET_KEY=sk_test_xxxx
+STRIPE_REDIRECT_AFTER_CHECKOUT_URL=https://xxxx.com
